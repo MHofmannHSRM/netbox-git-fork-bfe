@@ -1283,27 +1283,85 @@ class PortTypeChoices(ChoiceSet):
     TYPE_URM_P8 = 'urm-p8'
     TYPE_OTHER = 'other'
 
+    # Erweiterung
+    TYPE_XLR_3P = 'xlr-3p'
+    TYPE_XLR_4P = 'xlr-4p'
+    TYPE_XLR_5P = 'xlr-5p'
+    TYPE_XLR_6P = 'xlr-6p'
+    TYPE_XLR_7P = 'xlr-7p'
+    TYPE_KLINKE_635mm_2P = 'klinke-635mm-2p'
+    TYPE_KLINKE_635mm_3P = 'klinke-635mm-3p'
+    TYPE_KLINKE_350mm_2P = 'klinke-350mm-2p'
+    TYPE_KLINKE_350mm_3P = 'klinke-350mm-3p'
+    TYPE_KLINKE_350mm_4P = 'klinke-350mm-4p'
+    TYPE_BANANA_PLUG = 'banana-plug'
+    TYPE_DIN_3P = 'din-3p'
+    TYPE_DIN_4P = 'din-4p'
+    TYPE_DIN_5P = 'din-5p'
+    TYPE_DIN_6P = 'din-6p'
+    TYPE_DIN_7P = 'din-7p'
+    TYPE_DIN_8P = 'din-8p'
+    TYPE_SPEAKON_2P = 'speakon-2p'
+    TYPE_SPEAKON_3P = 'speakon-3p'
+    TYPE_SPEAKON_4P = 'speakon-4p'
+    TYPE_TOSLINK = 'toslink'
+    TYPE_MINI_BNC = 'mini-bnc'
+    TYPE_HDBNC = 'hdbnc'
+    TYPE_DIN_10_23 = 'din-10-23'
+    TYPE_BELLING_LEE = 'belling-lee'
+    TYPE_RCA_CHINCH = 'rca-chinch'
+    TYPE_DVI_I = 'dvi-i'
+    TYPE_DVI_A = 'dvi-a'
+    TYPE_DVI_D = 'dvi-d'
+    TYPE_DMS_59 = 'dms-59'
+    TYPE_DISPLAYPORT = 'displayport'
+    TYPE_MINI_DISPLAYPORT = 'mini-displayport'
+    TYPE_HDMI = 'hdmi'
+    TYPE_MINI_HDMI = 'mini-hdmi'
+    TYPE_MICRO_HDMI = 'micro-hdmi'
+    TYPE_FUW = 'fuw'
+    TYPE_FGW = 'fgw'
+    TYPE_FXW = 'fxw'
+    TYPE_EDW = 'edw'
+    TYPE_EBW = 'ebw'
+    TYPE_ENW = 'enw'
+    TYPE_PUW = 'puw'
+    TYPE_PHW = 'phw'
+    TYPE_PEW = 'pew'
+    TYPE_PWB = 'pwb'
+    TYPE_TRIAX = 'triax'
+    TYPE_D_SUB_9P = 'd-sub-9p'
+    TYPE_D_SUB_15P = 'd-sub-15p'
+    TYPE_D_SUB_15P_HD = 'd-sub-15p-hd'
+    TYPE_D_SUB_25P = 'd-sub-25p'
+    TYPE_D_SUB_26P = 'd-sub-26p'
+    TYPE_D_SUB_37P = 'd-sub-37p'
+    TYPE_D_SUB_50P = 'd-sub-50p'
+    TYPE_D_SUB_68P = 'd-sub-68p'
+    TYPE_FW40_4P = 'fw40-4p'
+    TYPE_FW400_6P = 'fw400-6p'
+    TYPE_FW800_400_9P = 'fw800-40-9p'
+    TYPE_FW800_9P = 'fw800-9p'
+
     CHOICES = (
         (
             _('Copper'),
             (
-                (TYPE_8P8C, '8P8C'),
+                (TYPE_8P8C, '8P8C'), # todo rj45
                 (TYPE_8P6C, '8P6C'),
                 (TYPE_8P4C, '8P4C'),
                 (TYPE_8P2C, '8P2C'),
-                (TYPE_6P6C, '6P6C'),
-                (TYPE_6P4C, '6P4C'),
-                (TYPE_6P2C, '6P2C'),
-                (TYPE_4P4C, '4P4C'),
+                (TYPE_6P6C, '6P6C'), # todo rj12, rj25
+                (TYPE_6P4C, '6P4C'), # todo rj14, rj11
+                (TYPE_6P2C, '6P2C'), # todo rj11
+                (TYPE_4P4C, '4P4C'), # todo rj10, rj9, rj22
                 (TYPE_4P2C, '4P2C'),
                 (TYPE_GG45, 'GG45'),
                 (TYPE_TERA4P, 'TERA 4P'),
                 (TYPE_TERA2P, 'TERA 2P'),
                 (TYPE_TERA1P, 'TERA 1P'),
                 (TYPE_110_PUNCH, '110 Punch'),
-                (TYPE_BNC, 'BNC'),
-                (TYPE_F, 'F Connector'),
-                (TYPE_N, 'N Connector'),
+
                 (TYPE_MRJ21, 'MRJ21'),
             ),
         ),
@@ -1315,10 +1373,10 @@ class PortTypeChoices(ChoiceSet):
                 (TYPE_LC_PC, 'LC/PC'),
                 (TYPE_LC_UPC, 'LC/UPC'),
                 (TYPE_LC_APC, 'LC/APC'),
-                (TYPE_LSH, 'LSH'),
-                (TYPE_LSH_PC, 'LSH/PC'),
-                (TYPE_LSH_UPC, 'LSH/UPC'),
-                (TYPE_LSH_APC, 'LSH/APC'),
+                (TYPE_LSH, 'LSH'), # todo e2000
+                (TYPE_LSH_PC, 'LSH/PC'), # todo e2000
+                (TYPE_LSH_UPC, 'LSH/UPC'), # todo e2000
+                (TYPE_LSH_APC, 'LSH/APC'), # todo e2000
                 (TYPE_LX5, 'LX.5'),
                 (TYPE_LX5_PC, 'LX.5/PC'),
                 (TYPE_LX5_UPC, 'LX.5/UPC'),
@@ -1339,6 +1397,102 @@ class PortTypeChoices(ChoiceSet):
                 (TYPE_URM_P8, 'URM-P8'),
                 (TYPE_SPLICE, 'Splice'),
             ),
+        ), # todo namen
+        (
+            _('Audio'),
+            (
+                (TYPE_XLR_3P, 'XLR 3P'),
+                (TYPE_XLR_4P, 'XLR 4P'),
+                (TYPE_XLR_5P, 'XLR 5P'),
+                (TYPE_XLR_6P, 'XLR 6P'),
+                (TYPE_XLR_7P, 'XLR 7P'),
+                (TYPE_KLINKE_635mm_2P, 'Klinke 6.35mm 2P'),
+                (TYPE_KLINKE_635mm_3P, 'Klinke 6.35mm 3P'),
+                (TYPE_KLINKE_350mm_2P, 'Klinke 3.5mm 2P'),
+                (TYPE_KLINKE_350mm_3P, 'Klinke 3.5mm 3P'),
+                (TYPE_KLINKE_350mm_4P, 'Klinke 3.5mm 4P'),
+                (TYPE_BANANA_PLUG, 'Banana Plug'),
+                (TYPE_DIN_3P, 'DIN 3P'),
+                (TYPE_DIN_4P, 'DIN 4P'),
+                (TYPE_DIN_5P, 'DIN 5P'),
+                (TYPE_DIN_6P, 'DIN 6P'),
+                (TYPE_DIN_7P, 'DIN 7P'),
+                (TYPE_DIN_8P, 'DIN 8P'),
+                (TYPE_SPEAKON_2P, 'Speakon 2P'),
+                (TYPE_SPEAKON_3P, 'Speakon 3P'),
+                (TYPE_SPEAKON_4P, 'Speakon 4P'),
+                (TYPE_TOSLINK, 'TOSLINK'),
+            ),
+        ),
+        (
+            _('Coaxial'),
+            (
+                (TYPE_BNC, 'BNC'),
+                (TYPE_MINI_BNC, 'Mini BNC'),
+                (TYPE_HDBNC, 'HDBNC'),
+                (TYPE_DIN_10_23, 'DIN 1.0/2.3'),
+                (TYPE_F, 'F Connector'),
+                (TYPE_N, 'N Connector'),
+                (TYPE_BELLING_LEE, 'Belling-Lee/IEC'),
+                (TYPE_RCA_CHINCH, 'RCA/Chinch'),
+            ),
+        ),
+        (
+            _('Video'),
+            (
+                (TYPE_DVI_I, 'DVI-I'),
+                (TYPE_DVI_A, 'DVI-A'),
+                (TYPE_DVI_D, 'DVI-D'),
+                (TYPE_DMS_59, 'DMS-59'),
+                (TYPE_DISPLAYPORT, 'DisplayPort'),
+                (TYPE_MINI_DISPLAYPORT, 'Mini-DisplayPort'),
+                (TYPE_HDMI, 'HDMI'),
+                (TYPE_MINI_HDMI, 'Mini-HDMI'),
+                (TYPE_MICRO_HDMI, 'Micro-HDMI'),
+            ),
+        ),
+        (
+            _('Lemo'),
+            (
+                (TYPE_FUW, 'FUW'),
+                (TYPE_FGW, 'FGW'),
+                (TYPE_FXW, 'FXW'),
+                (TYPE_EDW, 'EDW'),
+                (TYPE_EBW, 'EBW'),
+                (TYPE_ENW, 'ENW'),
+                (TYPE_PUW, 'PUW'),
+                (TYPE_PHW, 'PHW'),
+                (TYPE_PEW, 'PEW'),
+                (TYPE_PWB, 'PWB'),
+            ),
+        ),
+        (
+            _('Triax'),
+            (
+                (TYPE_TRIAX, 'Triax'),
+            ),
+        ),
+        (
+            _('D-Sub'),
+            (
+                (TYPE_D_SUB_9P, 'D-Sub 9P'),
+                (TYPE_D_SUB_15P, 'D-Sub 15P'),
+                (TYPE_D_SUB_15P_HD, 'D-Sub 15P HD (VGA)'),
+                (TYPE_D_SUB_25P, 'D-Sub 25P'),
+                (TYPE_D_SUB_26P, 'D-Sub 26P'),
+                (TYPE_D_SUB_37P, 'D-Sub 37P'),
+                (TYPE_D_SUB_50P, 'D-Sub 50P'),
+                (TYPE_D_SUB_68P, 'D-Sub 68P'),
+            ),
+        ),
+        (
+            _('Firewire'),
+            (
+                (TYPE_FW40_4P, 'FW40 4P'),
+                (TYPE_FW400_6P, 'FW400 6P'),
+                (TYPE_FW800_400_9P, 'FW800/400 9P'),
+                (TYPE_FW800_9P, 'FW800 9P'),
+            ),
         ),
         (
             _('Other'),
@@ -1347,6 +1501,8 @@ class PortTypeChoices(ChoiceSet):
             )
         )
     )
+
+
 
 
 #
