@@ -645,6 +645,9 @@ class PowerOutletTypeChoices(ChoiceSet):
     TYPE_USB_A = 'usb-a'
     TYPE_USB_MICROB = 'usb-micro-b'
     TYPE_USB_C = 'usb-c'
+    # Molex
+    TYPE_MOLEX_5_25_4P = 'molex-5-25-4p'
+    TYPE_MOLEX_3_5_4P = 'molex-3-5-4p'
     # Direct current (DC)
     TYPE_DC = 'dc-terminal'
     # Proprietary
@@ -759,6 +762,10 @@ class PowerOutletTypeChoices(ChoiceSet):
             (TYPE_USB_A, 'USB Type A'),
             (TYPE_USB_MICROB, 'USB Micro B'),
             (TYPE_USB_C, 'USB Type C'),
+        )),
+        ('Molex', (
+            (TYPE_MOLEX_5_25_4P, 'Molex 5.25" 4P'),
+            (TYPE_MOLEX_3_5_4P, 'Molex 3.5" 4P'),
         )),
         ('DC', (
             (TYPE_DC, 'DC Terminal'),
