@@ -556,6 +556,7 @@ class PowerOutletTypeChoices(ChoiceSet):
     # IEC 60320
     TYPE_IEC_C5 = 'iec-60320-c5'
     TYPE_IEC_C7 = 'iec-60320-c7'
+    TYPE_IEC_C10 = 'iec-60320-c10'
     TYPE_IEC_C13 = 'iec-60320-c13'
     TYPE_IEC_C15 = 'iec-60320-c15'
     TYPE_IEC_C19 = 'iec-60320-c19'
@@ -662,6 +663,7 @@ class PowerOutletTypeChoices(ChoiceSet):
         ('IEC 60320', (
             (TYPE_IEC_C5, 'C5'),
             (TYPE_IEC_C7, 'C7'),
+            (TYPE_IEC_C10, 'C10'),
             (TYPE_IEC_C13, 'C13'),
             (TYPE_IEC_C15, 'C15'),
             (TYPE_IEC_C19, 'C19'),
