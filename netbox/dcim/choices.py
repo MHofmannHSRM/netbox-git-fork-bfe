@@ -945,6 +945,59 @@ class InterfaceTypeChoices(ChoiceSet):
     # Other
     TYPE_OTHER = 'other'
 
+    # Erweiterung
+    # Audio
+    TYPE_ANALOG_AUDIO = 'analog-audio'
+    TYPE_ANALOG_AUDIO_MONO = 'analog-audio-mono'
+    TYPE_ANALOG_AUDIO_STEREO = 'analog-audio-stereo'
+    TYPE_TRRS = 'trrs'
+    TYPE_AES_EBU = 'aes-ebu'
+    TYPE_S_PDIF = 's-pdif'
+    TYPE_MADI = 'madi'
+    TYPE_MIDI = 'midi'
+    TYPE_DANTE = 'dante'
+    TYPE_AES67 = 'aes67'
+    TYPE_RAVENNA = 'ravenna'
+
+    # Video
+    TYPE_SDI_SD = 'sdi-sd'
+    TYPE_SDI_HD = 'sdi-hd'
+    TYPE_SDI_3G = 'sdi-3g'
+    TYPE_SDI_6G = 'sdi-6g'
+    TYPE_SDI_12G = 'sdi-12g'
+    TYPE_SDI_24G = 'sdi-24g'
+    TYPE_COMPOSITE_VIDEO = 'composite-video'
+    TYPE_ANALOG_VIDEO = 'analog-video'
+    TYPE_DIGITAL_VIDEO = 'digital-video'
+    TYPE_HDMI_1_4 = 'hdmi-1-4'
+    TYPE_HDMI_2_0 = 'hdmi-2-0'
+    TYPE_HDMI_2_1 = 'hdmi2-1'
+    TYPE_DISPLAYPORT_1_2 = 'displayport-1-2'
+    TYPE_DISPLAYPORT_1_4 = 'displayport-1-4'
+    TYPE_DISPLAYPORT_2_0 = 'displayport-2-0'
+    TYPE_DISPLAYPORT_2_1 = 'displayport-2-1'
+
+    # Serial
+    TYPE_RS_232 = 'rs-232'
+    TYPE_RS_422 = 'rs-422'
+    TYPE_RS_485 = 'rs-485'
+
+    # Firewire
+    TYPE_FIREWIRE_400 = 'firewire-400'
+    TYPE_FIREWIRE_800 = 'firewire-800'
+
+    # Ref
+    TYPE_BB = 'bb'
+    TYPE_TLS = 'tls'
+
+    # Other
+    TYPE_GPS = 'gps'
+    TYPE_KVM = 'kvm'
+    TYPE_TC = 'tc'
+    TYPE_TRIAX = 'triax'
+    TYPE_UHF = 'uhf'
+    TYPE_WCLK = 'wclk'
+    
     CHOICES = (
         (
             _('Virtual interfaces'),
@@ -1089,6 +1142,9 @@ class InterfaceTypeChoices(ChoiceSet):
                 (TYPE_E1, 'E1 (2.048 Mbps)'),
                 (TYPE_T3, 'T3 (45 Mbps)'),
                 (TYPE_E3, 'E3 (34 Mbps)'),
+                (TYPE_RS_232, 'RS-232'),
+                (TYPE_RS_422, 'RS-422'),
+                (TYPE_RS_485, 'RS-485'),
             )
         ),
         (
@@ -1134,8 +1190,64 @@ class InterfaceTypeChoices(ChoiceSet):
             )
         ),
         (
+            _('Audio'),
+            (
+                (TYPE_ANALOG_AUDIO, _('Analog Audio')),
+                (TYPE_ANALOG_AUDIO_MONO, _('Analog Audio Mono')),
+                (TYPE_ANALOG_AUDIO_STEREO, _('Analog Audio Stereo')),
+                (TYPE_TRRS, _('TRRS (Headphones)')),
+                (TYPE_AES_EBU, _('AES/EBU (AES3)')),
+                (TYPE_S_PDIF, _('S/PDIF (TOSLINK)')),
+                (TYPE_MADI, _('MADI (AES10)')),
+                (TYPE_MIDI, _('MIDI')),
+                (TYPE_DANTE, _('DANTE')),
+                (TYPE_AES67, _('AES67')),
+                (TYPE_RAVENNA, _('Ravenna')),
+            )
+        ),
+        (
+            _('Video'),
+            (
+                (TYPE_SDI_SD, _('SDI SD')),
+                (TYPE_SDI_HD, _('SDI HD')),
+                (TYPE_SDI_3G, _('SDI 3G')),
+                (TYPE_SDI_6G, _('SDI 6G')),
+                (TYPE_SDI_12G, _('SDI 12G')),
+                (TYPE_SDI_24G, _('SDI 24G')),
+                (TYPE_COMPOSITE_VIDEO, _('Composite Video')),
+                (TYPE_ANALOG_VIDEO, _('Analog Video (VGA)')),
+                (TYPE_DIGITAL_VIDEO, _('Digital Video (DVI)')),
+                (TYPE_HDMI_1_4, _('HDMI 1.4')),
+                (TYPE_HDMI_2_0, _('HDMI 2.0')),
+                (TYPE_HDMI_2_1, _('HDMI 2.1')),
+                (TYPE_DISPLAYPORT_1_2, _('Displayport 1.2')),
+                (TYPE_DISPLAYPORT_1_4, _('Displayport 1.4')),
+                (TYPE_DISPLAYPORT_2_0, _('Displayport 2.0')),
+                (TYPE_DISPLAYPORT_2_1, _('Displayport 2.1')),
+            )
+        ),
+        (
+            _('Firewire'),
+            (
+                (TYPE_FIREWIRE_400, _('FireWire 400')),
+                (TYPE_FIREWIRE_800, _('FireWire 800')),
+            )
+        ),        (
+            _('Reference'),
+            (
+                (TYPE_BB, _('Black Burst')),
+                (TYPE_TLS, _('Tri-Level-Sync')),
+            )
+        ),
+        (
             _('Other'),
             (
+                (TYPE_WCLK, _('WCLK')),
+                (TYPE_GPS, _('GPS')),
+                (TYPE_KVM, _('KVM')),
+                (TYPE_TC, _('TC')),
+                (TYPE_TRIAX, _('Triax')),
+                (TYPE_UHF, _('UHF')),
                 (TYPE_OTHER, _('Other')),
             )
         ),
