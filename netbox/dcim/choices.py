@@ -303,6 +303,7 @@ class PowerPortTypeChoices(ChoiceSet):
     # IEC 60320
     TYPE_IEC_C6 = 'iec-60320-c6'
     TYPE_IEC_C8 = 'iec-60320-c8'
+    TYPE_IEC_C9 = 'iec-60320-c9'
     TYPE_IEC_C14 = 'iec-60320-c14'
     TYPE_IEC_C16 = 'iec-60320-c16'
     TYPE_IEC_C20 = 'iec-60320-c20'
@@ -399,6 +400,9 @@ class PowerPortTypeChoices(ChoiceSet):
     TYPE_USB_MICRO_AB = 'usb-micro-ab'
     TYPE_USB_3_B = 'usb-3-b'
     TYPE_USB_3_MICROB = 'usb-3-micro-b'
+    # Molex
+    TYPE_MOLEX_5_25_4P = 'molex-5-25-4p'
+    TYPE_MOLEX_3_5_4P = 'molex-3-5-4p'
     # Direct current (DC)
     TYPE_DC = 'dc-terminal'
     # Proprietary
@@ -416,6 +420,7 @@ class PowerPortTypeChoices(ChoiceSet):
         ('IEC 60320', (
             (TYPE_IEC_C6, 'C6'),
             (TYPE_IEC_C8, 'C8'),
+            (TYPE_IEC_C9, 'C9'),
             (TYPE_IEC_C14, 'C14'),
             (TYPE_IEC_C16, 'C16'),
             (TYPE_IEC_C20, 'C20'),
@@ -519,6 +524,10 @@ class PowerPortTypeChoices(ChoiceSet):
             (TYPE_USB_MICRO_AB, 'USB Micro AB'),
             (TYPE_USB_3_B, 'USB 3.0 Type B'),
             (TYPE_USB_3_MICROB, 'USB 3.0 Micro B'),
+        )),
+        ('Molex', (
+            (TYPE_MOLEX_5_25_4P, 'Molex 5.25" 4P'),
+            (TYPE_MOLEX_3_5_4P, 'Molex 3.5" 4P'),
         )),
         ('DC', (
             (TYPE_DC, 'DC Terminal'),
