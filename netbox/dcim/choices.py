@@ -648,6 +648,12 @@ class PowerOutletTypeChoices(ChoiceSet):
     # Molex
     TYPE_MOLEX_5_25_4P = 'molex-5-25-4p'
     TYPE_MOLEX_3_5_4P = 'molex-3-5-4p'
+    # RC-5320A (EIAJ)
+    TYPE_EIAJ_01 = 'eija-01'
+    TYPE_EIAJ_02 = 'eija-02'
+    TYPE_EIAJ_03 = 'eija-03'
+    TYPE_EIAJ_04 = 'eija-04'
+    TYPE_EIAJ_05 = 'eija-05'
     # Direct current (DC)
     TYPE_DC = 'dc-terminal'
     # Proprietary
@@ -766,6 +772,13 @@ class PowerOutletTypeChoices(ChoiceSet):
         ('Molex', (
             (TYPE_MOLEX_5_25_4P, 'Molex 5.25" 4P'),
             (TYPE_MOLEX_3_5_4P, 'Molex 3.5" 4P'),
+        )),
+        ('RC-5320A (EIJA)', (
+            (TYPE_EIAJ_01, 'EIJA-01'),
+            (TYPE_EIAJ_02, 'EIJA-02'),
+            (TYPE_EIAJ_03, 'EIJA-03'),
+            (TYPE_EIAJ_04, 'EIJA-04'),
+            (TYPE_EIAJ_05, 'EIJA-05'),
         )),
         ('DC', (
             (TYPE_DC, 'DC Terminal'),
