@@ -1417,7 +1417,7 @@ class PortTypeChoices(ChoiceSet):
     TYPE_TERA2P = 'tera-2p'
     TYPE_TERA1P = 'tera-1p'
     TYPE_110_PUNCH = '110-punch'
-    TYPE_BNC = 'bnc'
+    TYPE_BNC_50 = 'bnc-50'
     TYPE_F = 'f'
     TYPE_N = 'n'
     TYPE_MRJ21 = 'mrj21'
@@ -1473,6 +1473,7 @@ class PortTypeChoices(ChoiceSet):
     TYPE_SPEAKON_3P = 'speakon-3p'
     TYPE_SPEAKON_4P = 'speakon-4p'
     TYPE_TOSLINK = 'toslink'
+    TYPE_BNC_75 = 'bnc-75'
     TYPE_MINI_BNC = 'mini-bnc'
     TYPE_HDBNC = 'hdbnc'
     TYPE_DIN_10_23 = 'din-10-23'
@@ -1595,7 +1596,8 @@ class PortTypeChoices(ChoiceSet):
         (
             _('Coaxial'),
             (
-                (TYPE_BNC, 'BNC'),
+                (TYPE_BNC_50, 'BNC (50 Ohm)'),
+                (TYPE_BNC_75, 'BNC (75 Ohm)'),
                 (TYPE_MINI_BNC, 'Mini BNC'),
                 (TYPE_HDBNC, 'HDBNC'),
                 (TYPE_DIN_10_23, 'DIN 1.0/2.3'),
