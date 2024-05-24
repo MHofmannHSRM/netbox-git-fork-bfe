@@ -303,7 +303,6 @@ class PowerPortTypeChoices(ChoiceSet):
     # IEC 60320
     TYPE_IEC_C6 = 'iec-60320-c6'
     TYPE_IEC_C8 = 'iec-60320-c8'
-    TYPE_IEC_C9 = 'iec-60320-c9'
     TYPE_IEC_C14 = 'iec-60320-c14'
     TYPE_IEC_C16 = 'iec-60320-c16'
     TYPE_IEC_C20 = 'iec-60320-c20'
@@ -400,9 +399,6 @@ class PowerPortTypeChoices(ChoiceSet):
     TYPE_USB_MICRO_AB = 'usb-micro-ab'
     TYPE_USB_3_B = 'usb-3-b'
     TYPE_USB_3_MICROB = 'usb-3-micro-b'
-    # Molex
-    TYPE_MOLEX_5_25_4P = 'molex-5-25-4p'
-    TYPE_MOLEX_3_5_4P = 'molex-3-5-4p'
     # Direct current (DC)
     TYPE_DC = 'dc-terminal'
     # Proprietary
@@ -415,6 +411,22 @@ class PowerPortTypeChoices(ChoiceSet):
     # Other
     TYPE_HARDWIRED = 'hardwired'
     TYPE_OTHER = 'other'
+
+    # Erweiterungen
+    # RC-5320A (EIAJ)
+    TYPE_EIAJ_01 = 'eija-01'
+    TYPE_EIAJ_02 = 'eija-02'
+    TYPE_EIAJ_03 = 'eija-03'
+    TYPE_EIAJ_04 = 'eija-04'
+    TYPE_EIAJ_05 = 'eija-05'
+    
+    # Molex
+    TYPE_MOLEX_5_25_4P = 'molex-5-25-4p'
+    TYPE_MOLEX_3_5_4P = 'molex-3-5-4p'
+
+    # IEC
+    TYPE_IEC_C9 = 'iec-60320-c9'
+
 
     CHOICES = (
         ('IEC 60320', (
@@ -529,6 +541,13 @@ class PowerPortTypeChoices(ChoiceSet):
             (TYPE_MOLEX_5_25_4P, 'Molex 5.25" 4P'),
             (TYPE_MOLEX_3_5_4P, 'Molex 3.5" 4P'),
         )),
+        ('RC-5320A (EIJA)', (
+            (TYPE_EIAJ_01, 'EIJA-01'),
+            (TYPE_EIAJ_02, 'EIJA-02'),
+            (TYPE_EIAJ_03, 'EIJA-03'),
+            (TYPE_EIAJ_04, 'EIJA-04'),
+            (TYPE_EIAJ_05, 'EIJA-05'),
+        )),
         ('DC', (
             (TYPE_DC, 'DC Terminal'),
         )),
@@ -556,7 +575,6 @@ class PowerOutletTypeChoices(ChoiceSet):
     # IEC 60320
     TYPE_IEC_C5 = 'iec-60320-c5'
     TYPE_IEC_C7 = 'iec-60320-c7'
-    TYPE_IEC_C10 = 'iec-60320-c10'
     TYPE_IEC_C13 = 'iec-60320-c13'
     TYPE_IEC_C15 = 'iec-60320-c15'
     TYPE_IEC_C19 = 'iec-60320-c19'
@@ -645,15 +663,6 @@ class PowerOutletTypeChoices(ChoiceSet):
     TYPE_USB_A = 'usb-a'
     TYPE_USB_MICROB = 'usb-micro-b'
     TYPE_USB_C = 'usb-c'
-    # Molex
-    TYPE_MOLEX_5_25_4P = 'molex-5-25-4p'
-    TYPE_MOLEX_3_5_4P = 'molex-3-5-4p'
-    # RC-5320A (EIAJ)
-    TYPE_EIAJ_01 = 'eija-01'
-    TYPE_EIAJ_02 = 'eija-02'
-    TYPE_EIAJ_03 = 'eija-03'
-    TYPE_EIAJ_04 = 'eija-04'
-    TYPE_EIAJ_05 = 'eija-05'
     # Direct current (DC)
     TYPE_DC = 'dc-terminal'
     # Proprietary
@@ -667,6 +676,22 @@ class PowerOutletTypeChoices(ChoiceSet):
     # Other
     TYPE_HARDWIRED = 'hardwired'
     TYPE_OTHER = 'other'
+
+    # Erweiterungen
+    # IEC
+    TYPE_IEC_C10 = 'iec-60320-c10'
+
+    # RC-5320A (EIAJ)
+    TYPE_EIAJ_01 = 'eija-01'
+    TYPE_EIAJ_02 = 'eija-02'
+    TYPE_EIAJ_03 = 'eija-03'
+    TYPE_EIAJ_04 = 'eija-04'
+    TYPE_EIAJ_05 = 'eija-05'
+
+    # Molex
+    TYPE_MOLEX_5_25_4P = 'molex-5-25-4p'
+    TYPE_MOLEX_3_5_4P = 'molex-3-5-4p'
+
 
     CHOICES = (
         ('IEC 60320', (
