@@ -1003,9 +1003,10 @@ class InterfaceTypeChoices(ChoiceSet):
 
     # Erweiterung
     # Audio
-    TYPE_ANALOG_AUDIO = 'analog-audio'
-    TYPE_ANALOG_AUDIO_MONO = 'analog-audio-mono'
-    TYPE_ANALOG_AUDIO_STEREO = 'analog-audio-stereo'
+    TYPE_ANALOG_AUDIO_BAL = 'analog-audio-bal'
+    TYPE_ANALOG_AUDIO_UNBAL = 'analog-audio-unbal'
+    TYPE_ANALOG_AUDIO_STEREO_BAL = 'analog-audio-stereo-bal'
+    TYPE_ANALOG_AUDIO_STEREO_UNBAL = 'analog-audio-stereo-unbal'
     TYPE_TRRS = 'trrs'
     TYPE_AES_EBU = 'aes-ebu'
     TYPE_S_PDIF = 's-pdif'
@@ -1014,6 +1015,13 @@ class InterfaceTypeChoices(ChoiceSet):
     TYPE_DANTE = 'dante'
     TYPE_AES67 = 'aes67'
     TYPE_RAVENNA = 'ravenna'
+    TYPE_ETHERSOUND = 'ethersound'
+    TYPE_AVB = 'avb'
+    TYPE_ADAT = 'adat'
+    TYPE_DOLBY_DIGITAL = 'dolby-digital'
+    TYPE_DOLBY_SURR = 'dolby-surr'
+    TYPE_DTS = 'dts'
+    TYPE_DTS_HD = 'dts-hd'
 
     # Video
     TYPE_SDI_SD = 'sdi-sd'
@@ -1248,9 +1256,10 @@ class InterfaceTypeChoices(ChoiceSet):
         (
             _('Audio'),
             (
-                (TYPE_ANALOG_AUDIO, _('Analog Audio')),
-                (TYPE_ANALOG_AUDIO_MONO, _('Analog Audio Mono')),
-                (TYPE_ANALOG_AUDIO_STEREO, _('Analog Audio Stereo')),
+                (TYPE_ANALOG_AUDIO_BAL, _('Analog Audio (balanced)')),
+                (TYPE_ANALOG_AUDIO_UNBAL, _('Analog Audio (unbalanced)')),
+                (TYPE_ANALOG_AUDIO_STEREO_BAL, _('Analog Audio Stereo (balanced)')),
+                (TYPE_ANALOG_AUDIO_STEREO_UNBAL, _('Analog Audio Stereo (unbalanced)')),
                 (TYPE_TRRS, _('TRRS (Headphones)')),
                 (TYPE_AES_EBU, _('AES/EBU (AES3)')),
                 (TYPE_S_PDIF, _('S/PDIF (TOSLINK)')),
@@ -1259,6 +1268,13 @@ class InterfaceTypeChoices(ChoiceSet):
                 (TYPE_DANTE, _('DANTE')),
                 (TYPE_AES67, _('AES67')),
                 (TYPE_RAVENNA, _('Ravenna')),
+                (TYPE_ETHERSOUND, _('EtherSound')),
+                (TYPE_AVB, _('AVB')),
+                (TYPE_ADAT, _('ADAT')),
+                (TYPE_DOLBY_DIGITAL, _('Dolby Digital (AC3)')),
+                (TYPE_DOLBY_SURR, _('Dolby Sourround')),
+                (TYPE_DTS, _('DTS')),
+                (TYPE_DTS_HD, _('DTS-HD Master')),
             )
         ),
         (
